@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Slide 1</title>
+</head>
+<body id="sl1">
+    <div id="content">
+        <header>
+            <h1>Omatsuri</h1>
+        <img src="../images/omatsuri.png" alt="image d'unjoueur de tambour">
+        <p>C'est un navigateur Open-source qui propose plusieurs outils CSS au même endroit</p>
+        </header>
+        <div id="links-container">
+            <div class="contain">
+                <h4>Events-keycode</h4>
+                <button type="button" id="img1" class="img"><a href="https://omatsuri.app/events-keycode" ></a></button>
+            </div>
+            <div class="contain">
+                <h4>Fake-data-generator</h4>
+                <button type="button" id="img2" class="img"><a href="https://omatsuri.app/fake-data-generator"></a></button>
+            </div>
+            <div class="contain">
+                <h4>Css-cursors</h4>
+                <button type="button" id="img3" class="img"><a href="https://omatsuri.app/css-cursors"></a></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.mjs"></script>
+    <script>
+        function addContent() {
+            const content = document.getElementById('content');
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'Additional content.';
+            content.appendChild(newParagraph);
+        }
+
+        function removeContent() {
+            const content = document.getElementById('content');
+            if (content.lastChild.tagName === 'P') {
+                content.removeChild(content.lastChild);
+            }
+        }
+
+        window.addContent = addContent;
+        window.removeContent = removeContent;
+    </script>
+</body>
+</html>
